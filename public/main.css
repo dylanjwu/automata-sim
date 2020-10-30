@@ -1,0 +1,10 @@
+.title {
+    text-align: left;
+    padding-left: 5%;
+    padding-top: 15px;
+}
+
+.input-rules {
+    border: 3px black;
+    align-content: center;
+}
