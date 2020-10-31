@@ -5,13 +5,17 @@
 
 const grammars_to_test = {
     "grammar_1": {
-        'C': ['AB', 'BC', 'b'],
-
+        'S': ['XA', 'YB', 'AA', 'BB'],
+        'X': ['AS', 'BS'],
+        'A': ['a'],
+        'B': ['b'],
     },
     "grammar_2": {
 
     }
 };
+
+
 
 //convert to PDA:
 //for the above grammar rule: A and B are variables, b is a terminal

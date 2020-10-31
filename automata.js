@@ -18,6 +18,23 @@ function Automaton(transitions, accepts, alphabet) {
     this.alphabet = alphabet || [0, 1];
 }
 
+const grammars_to_test = {
+    "grammar_1": {
+        'S': ['XA', 'YB', 'AA', 'BB'],
+        'X': ['AS', 'BS'],
+        'A': ['a'],
+        'B': ['b'],
+    },
+    "grammar_2": {
+
+    }
+};
+
+
+console.log(grammars_to_test["grammar_1"])
+console.log(parse_grammar(grammars_to_test["grammar_1"]))
+
+/*
 //defining example automata, that accepts language: a^nb^n 
 
 //Automata AnBn
@@ -56,3 +73,4 @@ const aut_AnBn = new Automaton(transFunc_AnBn, acceptStates_AnBn, alphabet_AnBn)
 // const aut_palindrome = new Automaton(transFunc, acceptStates, alphabet);
 
 module.exports = aut_AnBn;
+*/
