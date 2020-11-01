@@ -28,4 +28,4 @@ const expected_anbn = {
     "babbab": false,
 }
 
-module.exports = expected_anbn;
+module.exports = expected_palindrome;

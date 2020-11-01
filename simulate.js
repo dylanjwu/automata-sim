@@ -1,5 +1,7 @@
+const { kStringMaxLength } = require("buffer");
 const colors = require("colors");
-const a = require("./automata.js");
+const { stringify } = require("querystring");
+const a = require("./parse_cnfg.js");
 const test = require("./tests.js");
 
 console.log(a);
@@ -18,6 +20,8 @@ function simulate(inputString, index, automata, state, stack) {
     if (trans[state]) {
         for (let edge of trans[state]) {
             for (let inp of edge.inputs) {
+                console.log(inp);
+
                 let indexCopy = index; //copy index
                 let stackCopy = [...stack]; //clone stack
 
@@ -54,4 +58,4 @@ function testAnBn(automata, test) {
 }
 
 
-testAnBn(a, test);
+testAnBn(a, { 'aab': true });
