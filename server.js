@@ -1,8 +1,6 @@
 const express = require('express');
 const parseToPDA = require('./pda_sim/parse_cnfg.js');
 const simulate = require('./pda_sim/simulate.js');
-require('./pda_sim/parse_cnfg.js');
-require('./pda_sim/simulate.js');
 // const cors = require('cors');
 
 let parsed_pda = null;
@@ -32,10 +30,11 @@ app.post('/api/pda', (req, res) => {
 });
 
 app.post('/api/simulate', (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     let sim_results = []; //booleans
     for (let s of req.body) {
         let result = simulate(s, 0, parsed_pda, 0, []);
+        console.log(s);
         sim_results.push(result);
     }
     res.send(sim_results);
